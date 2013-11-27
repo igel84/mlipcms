@@ -1,0 +1,11 @@
+- content_for :all_news do
+  .wrapper
+    .grid_5.prefix_1.suffix_1
+      = link_to posts_path, class: 'news' do
+        %strong.block-l.mt5.all-news Архив новостей
+- @posts.each_with_index do |post, index|
+  %div{class:"grid_5 suffix_1 #{index == 0 ? 'prefix_1' : ''}"}
+    = link_to post_link_path(post.slug), class: 'news' do
+      = image_tag post.image.thumb
+      %strong.block-l.color-3.mt5= post.title
+      %span.block-l.mb5.mt5= post.created_at.strftime("%d.%m.%Y")

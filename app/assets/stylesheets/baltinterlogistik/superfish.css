@@ -1,0 +1,248 @@
+/*** MENU ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+
+
+nav {
+    background: url("/assets/baltinterlogistik/menu-bg.gif") repeat-x scroll 0 0 #414141;
+    float: right;
+    margin-right: 11px;
+    margin-top: 47px;
+	border-bottom:2px solid #131315;
+}
+
+.home_li {
+	width:51px !important;
+}
+
+.sf-menu {
+	line-height:	1.0;
+}
+.sf-menu li {
+	float:			left;
+	width:97px;
+	text-align:center;
+	background:url(/assets/baltinterlogistik/divider1.gif) no-repeat right 0;
+	text-align:center;
+	z-index: 999;
+	position:		relative;
+}
+
+.last3 {
+	background:none !important;
+}
+
+.home {
+	background:url(/assets/baltinterlogistik/home.png) no-repeat 0 0px #555555 !important;
+	height:15px;
+	overflow: hidden;
+	text-indent: -1000px;
+}
+
+.sf-menu .home:hover,
+.sf-menu .home.active,
+.sf-menu li.sfHover > .home {
+	background:url(/assets/baltinterlogistik/home-hov.gif) no-repeat 0 0 #2b2b2b !important;
+}
+
+.sf-menu a {
+	display:		block;
+	position:		relative;
+	color:#eaeaea;
+	font-size:12px;
+	line-height:15px;
+	padding:20px 0 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:600;
+	text-transform:uppercase;
+}
+.sf-menu ul {
+    background: url("/assets/baltinterlogistik/menu-bg1.gif") repeat-x scroll 0 0 #424242;
+    padding: 28px 0 20px;
+    position: absolute;
+    top: -999em;
+    width: 117px;
+}
+
+
+.sf-menu ul ul {
+    background: url("/assets/baltinterlogistik/menu-bg3.gif") repeat-x scroll 0 0 #2d2d2d;
+    border-bottom: 1px solid #676666;
+    padding: 29px 0 18px;
+    position: absolute;
+    top: -999em;
+	border:none;
+    width: 117px;
+}
+
+.sf-menu ul ul:before {
+	position:absolute;
+	background:url(/assets/baltinterlogistik/marker1.png) no-repeat 0 0;
+	width:5px;
+	height:10px;
+	top:11px;
+	left:-5px;
+	content:'   ';
+}
+
+.sf-menu a:hover,
+.sf-menu a.active,
+.sf-menu li.sfHover > a  {
+	background:url(/assets/baltinterlogistik/menu-hov.gif) repeat-x 0 0 #2b2b2b;
+	text-decoration:none;
+}
+
+.sf-menu ul li {
+	width:			100%;
+	background:none;
+	margin-bottom:13px;
+}
+.sf-menu ul a {
+	transition: all 0.4s ease 0s;
+	color:#fff;
+	display:inline-block;
+	padding:0;
+}
+.sf-menu ul a:hover,
+.sf-menu ul li.sfHover > a {
+	color:#cfcfcf;
+	background:none;
+}
+
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			52px; /* match top ul list item height */
+	z-index:		99;
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left: 125px;
+    top: -8px;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+
+
+
+
+.sf-menu>li>.sf-with-ul>span {
+	display: block;
+	position: absolute;
+	background: url(/assets/baltinterlogistik/arrows.png) 0 bottom no-repeat;
+	width: 7px;
+	height: 5px;
+	left: 50%;
+	margin-left: -4px;
+	bottom: 10px;
+}
+
+.sf-menu>li>ul>li>.sf-with-ul>span {
+	display: block;
+	position: absolute;
+	background: url(/assets/baltinterlogistik/arrows.png) 0 bottom no-repeat;
+	width: 7px;
+	height: 5px;
+	left: 50%;
+	margin-left: -4px;
+	bottom: -5px;
+	pointer-events: none;
+} 
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+
+@media only screen and (max-width: 995px) {
+.sf-menu>li {
+	width: 75px;
+}
+
+
+
+
+
+a.last3 {
+	width: auto !important;
+}
+
+  header nav {
+  	margin-left: 0;
+  }
+
+  
+
+
+}
+@media only screen and (max-width: 767px) {
+	.menu_block {
+		float: none !important;
+		margin: 0 0px !important;	
+		padding: 20px 10px 20px;
+		clear: both;
+		left: 0;
+		right: 0;
+	}
+
+
+
+	.head-box3 {
+		padding: 25px 0;
+	}
+
+.foot-img {
+	display: block;
+}
+
+
+  header nav{
+		float:none;
+		font:12px/15px Arial, Helvetica, sans-serif;
+		text-transform:uppercase;
+		color:#927c67;
+		background: none;
+		margin: 0 auto;
+		padding-top: 18px;
+		
+	
+	}
+		nav:before{
+			content:'';
+			display:block;
+			margin-bottom:5px;
+			color: #fff;
+			font-weight: bold;
+			
+		}
+	.sf-menu{display:none !important; float: none;}
+	#mm0{
+		font:12px/15px Arial, Helvetica, sans-serif;
+		color:#202020;
+		width:100%;
+		margin: 0 auto;
+		float: none;
+    outline: none;
+		border:2px solid #fff;
+	}
+	
+	.search_block {
+		padding-bottom: 10px !important;	
+	}
+}

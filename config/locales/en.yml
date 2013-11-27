@@ -1,0 +1,41 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"  
+  views:
+    baltinterlogistic: BaltInterLogistic
+    site_baltinterlogistic: http://baltinterlogistic.com
+    phone: 'Phone:'
+    fax: 'FAX:'
+    banner1:
+      title: SPECIFIC FREIGHT
+      content: SOLUTIONS
+    banner2:
+      title: WE CARE ABOUT
+      content: YOUR CARGO
+    banner3:
+      title: Making transportation
+      content: fast and safe
+    more: Read More
+    last_post: 'Last news'
+  date:
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - apr
+    - may
+    - jun
+    - jul
+    - aug
+    - sep
+    - oct
+    - nov
+    - dec
+    formats:
+      default: ! '%d.%m.%Y'
+      long: ! '%d %B %Y'
+      short: ! '%d %b'
+      month: ! '%b'

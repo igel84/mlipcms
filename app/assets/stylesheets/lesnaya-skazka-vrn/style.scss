@@ -1,0 +1,371 @@
+@import 'compass/css3/border-radius';
+
+.fleft {float:left}
+.fright {float:right}
+.fcenter {float:none;text-align:center}
+.fclear {clear:both}
+.inner_copy {border:0;color:#f00;float:left;width:50% !important;margin:-100% 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:11px}
+body 
+  {
+  	margin:0;padding:0;
+  	background:url(/assets/lesnaya-skazka-vrn/bg.jpg) repeat left top;
+  	text-align:justify;
+  	font-family: 'Didact Gothic', sans-serif;
+  	font-size:14px;color:#000;
+  }
+h1, h2, h3 {margin-top:0;color:#6E6C00}
+h1 {font-size:2em}
+h2 {font-size:1.6em}
+h3 {font-size:1em}
+ul {}
+a {text-decoration:none;color:#fff}
+a:hover {border-bottom:none}
+a img {border:none}
+img.left {float:left;margin:0 20px 0 0}
+img.right {float:right;margin:0 0 0 20px}
+/* Header */
+#header {}
+#logo 
+  {
+	width:660px;
+	//height:289px;
+	margin-left:30px;
+	//background:url(/assets/lesnaya-skazka-vrn/zal.jpg) no-repeat left top;
+  }
+#logo img.logo { float: left; width: 200px; height:78px; }
+#logo img.photo { margin-top: 15px; }
+#logo h1, #logo p {margin:0;color:#26150b; float: right; font-style: italic; width: 460px; text-align: right;}
+#logo h1 span { color: #094a13; font-weight: bold; }
+#logo h1 {font-weight:normal;font-size:30px}
+#logo p {font-weight:normal;font-size:20px}
+//#logo p {text-transform:uppercase;padding:0 0 0 172px;font-size:10px;color:#fff}
+//#logo a {border:none;text-decoration:none;color:#fff}
+/* Menu */
+#menu {}
+/* Wrapper */
+#wrapper {width:950px;margin:0 auto;background:url(/assets/lesnaya-skazka-vrn/main-bg.jpg) repeat-y left top}
+/* Page */
+#page {width:940px;margin:0 auto;padding:15px 0}
+#page-bg {padding:11px 24px;background:url(/assets/lesnaya-skazka-vrn/img03.jpg) no-repeat}
+/* Latest Post */
+#latest-post {border:1px dashed #8D8D8D}
+/* Content */
+#content {float:left;width:710px}
+.post {padding:10px 10px 20px 30px;line-height:200%}
+
+.post .photo
+  { 
+    clear: both;
+    margin: 80px 10px 10px 0; 
+    @include border-radius(20px);
+    background: #3d311b;//#27150b;
+    
+    position: relative;
+
+    height:290px;
+    width: 660px;
+    
+    //padding:4px; //15px 15px 0 20px;    
+    vertical-align: middle;
+    text-align: center;
+  }
+.post .photo img
+  { 
+    @include border-radius(20px);
+    position: absolute; 
+    display: block; 
+    top: 8px;
+    left: 8px;
+    height: 274px; 
+    width: 644px;
+  }
+.post .photo:after 
+  {
+    position: absolute; 
+    display: block; 
+    content: '';
+    border: 1px solid #efd693;
+
+    top: 4px;
+    left: 4px;
+    height: 282px; 
+    width: 652px;
+    box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+    @include border-radius(20px);
+}
+.post h1 {font-weight:normal;font-size:30px}
+.post h2 
+  {
+    background: #3d311b;//#27150b;
+    
+    //border: 10px solid #efd693;
+    //outline: 10px solid #27150b;
+    
+    //outline: 2px dashed rgba(255,255,255,0.8);
+    //outline-offset: -10px;
+    //box-shadow: 0px 0px 3pt 2pt red;
+
+    //padding: 5px;
+    @include border-radius(20px);
+    position: relative;
+
+    text-align: center;
+    font-size:24px;
+    height:60px;
+    width: 660px;
+    margin:20px 10px 20px 0px;
+    padding:0; //15px 15px 0 20px;
+    line-height: 60px;
+    //background:url(/assets/lesnaya-skazka-vrn/head-bg.jpg) no-repeat left top;
+    font-weight:normal;
+    //border-bottom:none;
+    color: #fff;
+  }
+.post h2:before 
+  {
+    position: absolute; 
+    display: block; 
+    content: '';
+    border: 1px solid #efd693;
+
+    top: 4px;
+    left: 4px;
+    height: 52px; 
+    width: 652px;
+    box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+    @include border-radius(20px);
+}
+.post h2.title { margin-top: 100px; }
+.post h3 
+  {
+    //background: #3d311b;
+    //@include border-radius(20px);
+    //position: relative;
+
+    text-align: center;
+    font-size:30px;
+    margin:20px 10px 20px 0px;
+    line-height: 40px;
+    font-family: 'Marck Script', cursive;
+    font-weight:normal;
+    //font-style: italic;
+    color: #094a13;
+  }
+.post h3:before 
+  {
+    //position: absolute; 
+    //display: block; 
+    //content: '';
+    //border: 1px solid #efd693;
+    //top: 4px;
+    //left: 4px;
+    //height: 32px; 
+    //width: 652px;
+    //box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+    //@include border-radius(20px);
+}
+.post p 
+  {
+    color: #26150b;
+    margin:0 20px 10px 15px;
+    font-size: 14px; 
+  }
+.post p strong { color: #094a13; font-weight: bold; }
+.post ul {margin:0 20px 10px 45px}
+.post ul li {padding:2px 5px;list-style: outside disc;}
+
+.post table { border: none; width: 660px; } //margin: 10px 20px; }
+.post table tr td:nth-child(1)
+  { 
+    border: none; 
+    text-align: left; 
+    font-size: 14px;     
+    background:url(/assets/lesnaya-skazka-vrn/dot.png) repeat-x left top;    
+  }
+.post table tr td:nth-child(1) em
+  {
+    font-style: italic;
+    padding-left: 10px;
+    clear: left;
+    float: left;
+  }
+.post table tr td:nth-child(1) strong
+  {
+    background: #efd693;
+    padding-right: 10px;
+    font-size: 16px; 
+    font-style: normal;
+    float: left;
+  }
+.post table tr td:nth-child(2) { border: none; text-align: center; width: 120px; font-size: 16px; }
+.post table tr td:nth-child(3) { border: none; text-align: center; font-weight: bold; width: 80px; font-size: 16px; }
+
+.post .kontakt 
+  {
+    font-weight: normal; font-size: 18px;
+    margin-bottom: 20px;
+    span.name 
+      { 
+        //font-weight: bold; font-size: 18px; margin-bottom: 10px; 
+        display: block; 
+        text-align: center;
+        font-size:30px;
+        margin:20px 10px 20px 0px;
+        line-height: 40px;
+        color: #094a13;
+        font-family: 'Marck Script', cursive;
+        font-weight:normal;
+      }
+    span { padding-right: 10px; }
+    a 
+      { 
+        color: #094a13;
+        font-style: italic;   
+        text-decoration: underline; 
+        &:hover { text-decoration: none; }
+      }
+  }
+
+.title a:hover {}
+.byline {margin:0 15px 20px 15px;text-transform:uppercase}
+.links {font-size:11px;margin-top: 20px;}
+.links a 
+  {
+  	display:block;
+  	border:none;
+  	color: #094a13;
+  	font-style: italic;  	
+  	text-decoration: underline;
+  }
+.links a:hover { text-decoration: none; }
+.links .more {float:right;text-transform:uppercase}
+.links .comments {float:left;padding-left:20px}
+/* Sidebars */
+#sidebar1 {width:190px}
+#sidebar2 {width:210px}
+.sidebar h2 
+  {
+    //background:url(/assets/lesnaya-skazka-vrn/link-bg.jpg) no-repeat left top
+
+  }
+.sidebar {float:left;padding:0 10px;color:#A6986B}
+.sidebar ul {margin:0;padding:0;list-style:none}
+.sidebar li {padding:0 0 20px 0}
+.sidebar li ul {background:none}
+.sidebar li li {margin:0 5px;padding:4px 5px 8px 12px;background:url(/assets/lesnaya-skazka-vrn/img07.gif) no-repeat left 13px;border-bottom:1px dashed #5E4E2D}
+.sidebar li li a { font-size: 14px; }
+.sidebar li li a:hover { text-decoration: underline; }
+.sidebar li h2 
+  {
+    position: relative;
+    background: #3d311b;
+
+    text-align: center;
+    font-size:24px;
+    height:45px;
+    width: 210px;
+    //margin:20px 10px 20px 0px;
+    //padding:0; //15px 15px 0 20px;
+    line-height: 45px;
+
+  	//height:50px;
+  	margin: 0 0 20px 0;
+  	//padding:12px 0px 5px 0px;
+  	//background:url(/assets/lesnaya-skazka-vrn/img04.jpg) no-repeat left top;
+  	font-size:18px;
+  	font-weight:normal;
+  	text-align: center;
+  	color:#fff;
+    @include border-radius(15px);
+  }
+.sidebar li h2:before 
+  {
+    position: absolute; 
+    display: block; 
+    content: '';
+    border: 1px solid #efd693;
+
+    top: 4px;
+    left: 4px;
+    height: 37px; 
+    width: 202px;
+    box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+    @include border-radius(15px);
+}
+.sidebar p {padding:0 15px}
+
+.sidebar .calendar 
+  {
+    .ui-datepicker-inline
+      {
+        background: none;
+        border: none;
+      }
+    .ui-datepicker-header
+      {
+        background: none;
+        border: none;
+        color: #A6986B;  
+        text-align: center; 
+        margin: 10px 0 20px 0;   
+        a
+          {
+            color: #A6986B;
+            &.ui-state-hover { color: #fff; cursor: pointer; }
+            font-weight: bold;            
+            span { display: none; }
+            &.ui-datepicker-prev
+              {
+                float: left;
+                &:before { content: '«'; }
+              }
+            &.ui-datepicker-next
+              {
+                float: right;
+                &:before { content: '»'; }
+              }
+          }
+      }
+    .ui-datepicker table { width: 100%; }
+    .ui-datepicker th
+      {
+          border: none;
+          text-align: center;
+      }
+    .ui-datepicker td 
+      {
+          border: none;
+          text-align: center;
+          a 
+            { 
+              color: #A6986B;
+              &:hover { color: #fff; cursor: pointer; } 
+            }
+      }
+
+      .ui-state-default,
+      .ui-widget-content .ui-state-default,
+      .ui-widget-header .ui-state-default 
+        {
+          border: none;
+        }
+  }
+/* Search */
+#searchform {margin:0;padding:20px 15px}
+#searchform br {display:none}
+#s {margin:0;padding:2px 2px;width:165px;height:18px;border:none;background:#fff;font-size:10px;color:#000}
+#x {margin:1px 0 0 0;padding:2px 5px;height:24px;border:none;background:#000;text-decoration:none;text-transform:uppercase;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#fff}
+/* Calendar */
+#calendar_wrap {padding:0;text-align:center}
+#calendar_wrap table {width:100%}
+#calendar_wrap th {}
+#calendar_wrap td {}
+#calendar_wrap tfoot td {border:none}
+#calendar_wrap tfoot td#prev {text-align:left;font-weight:bold;border:none}
+#calendar_wrap tfoot td#prev a {border:none}
+#calendar_wrap tfoot td#next {text-align:right;font-weight:bold;border:none}
+#calendar_wrap tfoot td#next a {border:none}
+/* Footer */
+#footer {width:940px;height:150px;background:url(/assets/lesnaya-skazka-vrn/bottom-bg.jpg) no-repeat left top}
+#footer p {margin:0;padding:80px 0 0 0;text-align:center;text-transform:uppercase;font-size:10px;color:#575757}
+#footer a {color:#B2B2B2}

@@ -1,0 +1,21 @@
+!!!
+%html{:lang => "ru"}
+  %head
+    %title ilCamp
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "no-cache", "http-equiv" => "Cache-control"}/
+    %link{href: 'http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic', rel: 'stylesheet', type: 'text/css'}
+    = stylesheet_link_tag "application", :media => "all"    
+    /[if lt IE 8]
+      %div{style: ' clear: both; text-align:center; position: relative;'}
+        %a{href: "http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"}
+          %img{src: "http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg", border: "0", height: "42", width: "820", alt: "Вы используете старую версию браузера. Самое время обновиться"}на
+    /[if lt IE 9]
+      %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300', rel:'stylesheet', type:'text/css'}
+      %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700', rel: 'stylesheet', type:'text/css'}
+      %script{type: "text/javascript", src: "/assets/chipvrn/html5.js"}
+      %link{rel: "stylesheet", type: "text/css", media: "screen", href: "/assets/chipvrn/ie.css"}
+  %body
+    != alert + tag(:br) if alert
+    = yield
+    = controller_name

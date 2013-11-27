@@ -1,0 +1,139 @@
+!!!
+%html{:lang => "ru"}
+  %head
+    -#%title= @page == nil ? 'chipvrn коррекция спидометра воронеж' : 'chipvrn: ' + @page.description
+    %meta{:charset => "utf-8"}
+    = header
+    %meta{name:'yandex-verification', content:'49db2929c8338eab'}
+    %link{:href => "/assets/chipvrn/favicon.ico", :rel => "icon"}
+    %link{:href => "/assets/chipvrn/favicon.ico", :rel => "shortcut icon"}    
+    %link{:href => "/assets/chipvrn/reset.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/assets/chipvrn/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/assets/chipvrn/slider.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "/assets/chipvrn/jquery-1.7.min.js"}
+    %script{:src => "/assets/chipvrn/jquery.easing.1.3.js"}
+    %script{:src => "/assets/chipvrn/tms-0.4.1.js"}
+    :javascript
+      $(document).ready(function(){
+        $('.slider')._TMS({
+          show:0,
+          pauseOnHover:true,
+          prevBu:'.prev',
+          nextBu:'.next',
+          playBu:false,
+          duration:500,
+          preset:'fade',
+          pagination:true,//'.pagination',true,'<ul></ul>'
+          pagNums:false,
+          slideshow:8000,
+          numStatus:false,
+          banners:'fromBottom',// fromLeft, fromRight, fromTop, fromBottom
+          waitBannerAnimation:false,
+          progressBar:false
+        })
+        
+      }) 
+      $(function(){
+        if($(window).width() <= 1066)
+        {
+          $("#slider .prev").css("left", "55px")
+          $("#slider .next").css("right", "55px")
+        }
+      })
+    /[if lt IE 8]
+      %div{style: ' clear: both; text-align:center; position: relative;'}
+        %a{href: "http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"}
+          %img{src: "http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg", border: "0", height: "42", width: "820", alt: "Вы используете старую версию браузера. Самое время обновиться"}на
+    /[if lt IE 9]
+      %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300', rel:'stylesheet', type:'text/css'}
+      %link{href: 'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700', rel: 'stylesheet', type:'text/css'}
+      %script{type: "text/javascript", src: "/assets/chipvrn/html5.js"}
+      %link{rel: "stylesheet", type: "text/css", media: "screen", href: "/assets/chipvrn/ie.css"}
+  %body
+    .bg
+      %header
+        .main.wrap
+          %h1
+            %a{:href => "/"}
+              %img{:alt => "chipvrn - коррекция спидометра, чип-тюнинг", :src => "/assets/chipvrn/logo_chipvrn.png"}/
+          %p
+            %span Воронеж
+            %span 8-919-240-49-48
+        %nav
+          %ul.menu
+            / %li{class:"#{'current' if current_page?('/') || current_page?('/korrektsiya-probega')}"}
+            /   %a.home{:href => "/"}
+            /     %img{:alt => "", :src => "/assets/home.jpg"}/
+            %li{class:"first #{'current' if current_page?('/') || current_page?('/korrektsiya-probega')}"}
+              %a{:href => "/korrektsiya-probega"} Коррекция пробега
+            / %li{class:"#{'current' if current_page?('/')}"}
+            /   %a{:href => "maintenance.html"} Обслуживание
+            / %li{class:"#{'current' if current_page?('/')}"}
+            /   %a{:href => "repair.html"} Ремонт
+            / %li{class:"#{'current' if current_page?('/')}"}
+            /   %a{:href => "price-list.html"} Цены
+            %li{class:"#{'current' if current_page?('/immobilayzer-klyuchi')}"}
+              %a{:href => "/immobilayzer-klyuchi"} Иммобилайзер ключи
+            %li{class:"#{'current' if current_page?('/check-engine')}"}
+              %a{:href => "/check-engine"} Check Engine
+            %li{class:"#{'current' if current_page?('/moto')}"}
+              %a{:href => "/moto"} Мото
+            %li{class:"#{'current' if current_page?('/chip-tyuning')}"}
+              %a{:href => "/chip-tyuning"} Чип-тюнинг
+            %li{class:"#{'current' if current_page?('/tekuschiy-remont')}"}
+              %a{:href => "/tekuschiy-remont"} Текущий ремонт
+            %li{class:"#{'current' if current_page?('/kontakty')}"}
+              %a{:href => "/kontakty"} Контакты
+          .clear
+      / #slider
+      /   .slider-block
+      /     .slider
+      /       %ul.items
+      /         %li
+      /           %img{:alt => "", :src => "images/slide-1.jpg"}/
+      /           .banner
+      /             %div
+      /               %span Форд
+      /               %strong В чащах юга жил бы цитрус?
+      /               %p Здесь фабула объять не может всех эмоций — шепелявый скороход в юбке тащит горячий мёд.
+      /               %a.button{:href => "#"} Дальше
+      /         %li
+      /           %img{:alt => "", :src => "images/slide-2.jpg"}/
+      /           .banner
+      /             %div
+      /               %span Maserati GT
+      /               %strong Vulputate velit esse
+      /               %p sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.
+      /               %a.button{:href => "#"} Read More
+      /         %li
+      /           %img{:alt => "", :src => "images/slide-3.jpg"}/
+      /           .banner
+      /             %div
+      /               %span Honda HSC
+      /               %strong Molestie consequat vel
+      /               %p At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+      /               %a.button{:href => "#"} Read More
+      /     %a.prev{:href => "#"}
+      /     %a.next{:href => "#"}
+      / ==============================content================================
+      %section#content
+        = yield
+      / ==============================footer=================================
+      %footer
+        %a.link{href:"/skrutka-probega", title:"скрутка пробега корректировка спидометра (одометра) в воронеже"} скрутка пробега (корректировка спидометра),
+        %a.link{href:"/izgotovlenie-chip-klyuchey", title:"изготовление и программирование чип-ключей в воронеже"} изготовление/программирование ключей,
+        %a.link{href:"/proshivka-avtomobilya", title:"прошивка автомобиля в воронеже"} прошивка авто,
+        %a.link{href:"/sbros-oshibok", title:"диагностика и сброс ошибок Check Engine в воронеже"} диагностика/сброс ошибок Check Engine,
+        %a.link{href:"/diagnostika-i-remont-elektronnyh-sistem-i-elektrooborudovaniya", title: "диагностика и ремонт электронных систем и электрооборудования в воронеже"} ремонт электронных систем, 
+        %a.link{href:"/chip-tyuning-avtomobilya", title:"чип тюнинг автомобиля в воронеже"} чип-тюнинг, 
+        %a.link{href:"/remont-avto", title: "ремонт авто в воронеже"} автомобили, 
+        %a.link{href:"/remont-moto", title: "ремонт мото в воронеже"} Мотоциклы, 
+        %a.link{href:"/remont-spetstehniki", title: "ремонт спецтехники в воронеже"} Спецтехника
+        %br/
+        %a.link{:href => "http://mlip.ru", :title => "создание сайтов любой сложности, продвижение и раскрутка сайтов в воронеже"} Создание и продвижение сайта - МЛИП
+    :javascript
+      (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20851762 = new Ya.Metrika({id:20851762, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+    %noscript
+      %div
+        %img{:alt => "", :src => "//mc.yandex.ru/watch/20851762", :style => "position:absolute; left:-9999px;"}/

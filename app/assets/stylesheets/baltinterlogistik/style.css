@@ -1,0 +1,1230 @@
+/**/
+@import "/assets/baltinterlogistik/reset.css";
+@import "/assets/baltinterlogistik/skeleton.css";
+@import "/assets/baltinterlogistik/superfish.css";
+@import url(//fonts.googleapis.com/css?family=Open+Sans:700,600,400);
+
+ a[href^="tel:"] {
+color: inherit;
+text-decoration:none;
+}
+
+* {
+	-webkit-text-size-adjust: none;
+}
+
+body{
+	background: #161616;
+	font:12px/19px Arial, Helvetica, sans-serif;
+	color:#838383;
+	position:relative;
+	min-width:980px;
+}
+html,body{height:100%;}
+p{padding-bottom:19px;}
+a{color:#fff;outline:none;cursor:pointer;text-decoration:none;}
+a:hover{text-decoration:underline}
+/*  Header styles */
+h1,h2,h3,h4,h5,h6{line-height:1.3em;color:#e2e2e2;font-family: 'Open Sans', sans-serif; font-weight:600; margin-bottom:17px;text-transform:uppercase;}
+h1{font-size:29px;}
+h2{font-size:27px;}
+h3{font-size:25px;} 
+h4{font-size:23px;}  
+h5{font-size:21px;}
+h6{font-size:19px;}
+/* Global Structure---------------------------------------- */
+/*----- txt,links,lines,titles -----*/
+.extra-wrap{overflow:hidden;display:block;}
+.fleft{float:left}
+.fright{float:right}
+.alignright{text-align:right}
+.aligncenter{text-align:center}
+.alignmiddle *{vertical-align:middle}
+.color1{color:#ff2100;}
+
+
+.last1 {
+	margin-bottom:0 !important;
+}
+
+.last2 {
+	padding-bottom:0 !important;
+}
+
+.p31 {
+	padding-bottom:61px;
+}
+
+.wrapper {width:100%; overflow:hidden;}
+ 
+.p1 {margin-bottom:8px;}
+.p2 {margin-bottom:15px;}
+.p3 {margin-bottom:30px;}
+.p4 {margin-bottom:40px;}
+.p5 {margin-bottom:50px;}
+
+.reg {text-transform:uppercase;}
+
+.title {margin-bottom:18px;}
+
+.it {font-style:italic;}
+
+.letter {letter-spacing:-1px;}
+
+/*********************************boxes**********************************/
+.margin-bot {margin-bottom:35px;}
+
+.spacing {margin-right:35px;}
+
+.indent {padding:0 0 0px 30px;}
+.indent2 {padding-left:50px;}
+.indent-bot {margin-bottom:20px;}
+.indent-bot2 {margin-bottom:30px;}
+.indent-bot3 {margin-bottom:45px;}
+
+.img-indent-bot {margin-bottom:25px;}
+.img-indent {float:left; margin:0 20px 0px 0;}	
+.img-indent2 {float:left; margin:0 13px 0px 0;}	
+.img-indent-r {float:right; margin:0 0px 0px 40px;}	
+
+.prev-indent-bot {margin-bottom:10px;}	
+
+.buttons a:hover {cursor:pointer;}
+.clear {
+ clear: both;
+ display: block;
+ overflow: hidden;
+ visibility: hidden;
+ width: 0;
+ height: 0;
+}
+
+
+.logo {
+	display:block; 
+	width:254px; 
+	height:54px; 
+}
+
+/*********************************header*************************************/
+header {
+	width:100%;
+	position:relative; 
+	z-index:2;
+}
+
+.head-inner1 {
+	float:left;
+	color:#a4a3a3;
+	font-size:12px;
+	padding-left:20px;
+}
+
+.head-box1 {
+	padding:7px 0 9px;
+	background:url(/assets/baltinterlogistik/head-bg1.gif) repeat-x 0 0 ;
+}
+
+.head-box2 {
+	width:100%;
+	background:url(/assets/baltinterlogistik/head-bg3.gif) repeat 0 0 ;
+}
+
+.head-box3 {
+	background:url(/assets/baltinterlogistik/head-bg2.gif) no-repeat center 0;
+}
+
+.head-inner1 a {
+	color:#a4a3a3;
+	display:inline-block;
+	margin-right:3px;
+	transition: all 0.4s ease 0s;
+}
+.head-inner1 a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+.head-inner2 {
+	float:right;
+	padding-right:23px;
+	color:#a4a3a3;
+}
+
+.head-inner2 span {
+	display:inline-block;
+	color:#fff;
+}
+.head-inner2 a {
+	color:#fff;
+	transition: all 0.4s ease 0s;
+}
+.head-inner2 a:hover {
+	color:#a4a3a3;
+	text-decoration:none;
+}
+
+.head-inner2 strong {
+	display:inline-block;
+	font-weight:normal;
+	padding-left:18px;	
+}
+
+.p6 {
+	padding-left:12px !important;
+}
+
+
+header h1 {
+	padding:47px 0 0 10px;
+	margin:0;
+	font-size:0;
+	float:left;
+	line-height:0;
+}
+
+
+
+/********************** Content ************************/
+
+#content {
+	width:100%; 
+	padding:21px 0 31px;
+	position:relative;
+	z-index:1;
+	background:#161616;
+}
+
+.p17 {
+	padding:47px 0 31px !important;
+}
+
+																									/***** Page 1 *****/
+
+.button1 {
+	background:url(/assets/baltinterlogistik/button1.gif) repeat-x 0 0 #363636;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:14px;
+	line-height:17px;
+	padding:9px 23px 11px 16px;
+	font-family: 'Open Sans', sans-serif;
+	display:inline-block;
+	position:relative;
+}
+.button1:hover {
+	background:url(/assets/baltinterlogistik/button1-hov.gif) repeat-x 0 0 #5a5a5a;
+	text-decoration:none;
+}
+
+.button1 span {
+    background: url("/assets/baltinterlogistik/marker2.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 7px;
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    width: 4px;
+}
+
+aside {
+	margin:0;
+	background:url(/assets/baltinterlogistik/aside-bg.gif) repeat-x 0 0 #111111;
+	width:100%;
+	padding:29px 0 26px;
+}
+
+.head-box4 {
+	padding-bottom:46px;
+}
+
+.p16 {
+	padding-bottom:45px;
+}
+
+.page1-box1 {
+	overflow:hidden;
+	padding:0px 0 24px;
+	color:#e2e2e2;
+	font-family: 'Open Sans', sans-serif;
+	line-height:37px;
+	font-size:35px;
+	margin-bottom:30px;
+	letter-spacing:-1px;
+	font-weight:600;
+	text-transform:uppercase;
+	border-bottom:1px solid #1c1c1c;
+}
+
+.page1-box1 span {
+	color:#aaaaaa;
+	display:block;
+	font-weight:normal;
+}
+
+.inner1 {
+	background:url(/assets/baltinterlogistik/bg1.gif) repeat-x 0 0 #252525;
+	border-bottom:1px solid #4f4f4f;
+	color:#e2e2e2;
+	font-size:18px;
+	line-height:20px;
+	text-transform:uppercase;
+	font-family: 'Open Sans', sans-serif;
+	padding:16px 0 17px 55px;
+}
+
+.page1-box2 {
+	float:left;
+	width:236px;
+	position:relative;
+}
+.page1-box2:after {
+	display:block;
+	position:absolute;
+	z-index:99;
+	background:url(/assets/baltinterlogistik/divider3.gif) no-repeat 0 0 ;
+	top:0;
+	right:0;
+	width:2px;
+	height:100%;
+	content:' ';
+}
+
+
+.inner1 strong {
+	display:block;
+}
+
+.list1 a {
+	color:#9b9b9b;
+	font-size:12px;
+	transition: all 0.4s ease 0s;
+}
+
+.list1 a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+
+.list1 li {
+    background: url("/assets/baltinterlogistik/marker3.png") no-repeat scroll 0 4px transparent;
+    display: block;
+    line-height: 15px;
+    padding-bottom: 5px;
+    padding-left: 16px;
+}
+
+.list1 {
+	min-height:80px;
+	margin-bottom:18px;
+}
+
+.inner2 {
+	background:url(/assets/baltinterlogistik/bg2.gif) repeat-x 0 0 #303030;
+	padding:21px 0 30px 35px;
+}
+
+.button2 {
+	background:url(/assets/baltinterlogistik/button2.gif) repeat-x 0 0 #383838;
+	color:#fff;
+	text-transform:uppercase;
+	font-size:12px;
+	line-height:15px;
+	padding:8px 17px 9px 12px;
+	font-family: 'Open Sans', sans-serif;
+	display:inline-block;
+	position:relative;
+	box-shadow: 1px 2px 0px rgba(0,0,0,0.2);
+}
+
+.button2:hover {
+	background:url(/assets/baltinterlogistik/button2.gif) repeat-x 0 0 #888888;
+	text-decoration:none;
+}
+
+
+.button2 span {
+    background: url("/assets/baltinterlogistik/marker2.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 7px;
+    position: absolute;
+    right: 7px;
+    top: 12px;
+    width: 4px;
+}
+
+
+.p7 {
+	padding:16px 0 17px 44px !important;
+}
+
+.p8 {
+	padding:16px 0 17px 80px !important;
+}
+
+.p9 {
+	padding:18px 0 15px 64px !important;
+}
+
+.last4:after {
+	display:none;
+}
+
+.last4 {
+	width:232px !important;
+}
+
+.page1-img1 {
+	float:left;
+	margin-right:17px;
+}
+
+.text1 {
+	display:block;
+	color:#e2e2e2;
+	font-weight:bold;
+	word-spacing:-1px;
+	font-size:20px;
+	padding-top:8px;
+	line-height:24px;
+	font-family: 'Open Sans', sans-serif;
+	text-transform:uppercase;
+}
+
+.text2 {
+	display:block;
+	margin-top:-1px;
+	color:#666666;
+	font-size:20px;
+	font-family: 'Open Sans', sans-serif;
+	line-height:24px;
+	text-transform:uppercase;
+}
+
+.p10 {
+	padding-top:10px;
+}
+
+.page1-box3 {
+	padding-bottom:4px;
+	overflow:hidden;
+	border-bottom:1px solid #232323;
+}
+
+.p11 {
+	margin-bottom:23px;
+}
+
+.link1 {
+	color:#cacaca;
+	font-size:12px;
+	font-weight:bold;
+	transition: all 0.4s ease 0s;
+	font-family: 'Open Sans', sans-serif;
+	text-transform:uppercase;
+	line-height:19px;
+}
+
+.link1:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+.p12 {
+	padding-top:13px;
+}
+
+.page1-img2 {
+	float:left;
+	margin-right:19px;
+}
+
+.link2 {
+	color:#cacaca;
+	font-size:12px;
+	font-weight:bold;
+	transition: all 0.4s ease 0s;
+}
+
+.link2:hover {color:#fff; text-decoration:none;}
+
+.page1-box4 {
+	overflow:hidden;
+	margin-bottom:5px;
+	padding-top:4px;
+}
+
+.p13 {
+	display:inline-block;
+	margin-top:6px;
+}
+
+.page1-box4 p {
+	padding-top:1px;
+	padding-bottom:0;
+}
+
+.p14 {
+	padding-bottom:11px;
+}
+																									/***** Page 2 *****/
+
+
+.page2-img1 {
+	float:left;
+	margin-right:20px;
+	padding-top:4px;
+}
+
+.head-line {
+	background:url(/assets/baltinterlogistik/head-line.gif) repeat-x 0 0;
+	width:100%;
+	height:4px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.p18 {
+	padding-top:12px;
+	
+}
+
+.p19 {
+	padding-top:8px;
+	padding-bottom:11px;
+}
+
+
+.p15 {
+    border-bottom: 1px solid #232323;
+    margin-bottom: 23px;
+    padding-bottom: 6px;
+}
+
+.inner3 {
+    background: url("/assets/baltinterlogistik/bg4.gif") repeat-x scroll 0 -1px #3F3F41;
+    border-radius: 100%;
+    color: #E2E2E2;
+    float: left;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    height: 49px;
+    line-height: 19px;
+    margin-right: 18px;
+    padding-top: 11px;
+    text-align: center;
+    width: 60px;
+}
+
+
+.inner3 span {
+    display: block;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+.link3 {
+	text-transform:uppercase;
+	color:#666666;
+	font-size:20px;
+	transition: all 0.4s ease 0s;
+	word-spacing:-1px;
+	font-family: 'Open Sans', sans-serif;
+	line-height:24px;
+}
+
+.link3:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+.page2-box1 {
+	overflow:hidden;
+	padding-top:5px;
+}
+
+.p20 {
+	margin-top:11px;
+}
+
+.p21 {
+	padding-top:12px;	
+}
+
+
+.a1 {
+    margin-right: 34px;
+    margin-top: 12px;
+}
+.a2 {
+	margin-right:33px;
+	margin-top:12px;
+}	
+
+.a3 {
+	margin-right:58px;margin-top:12px;
+}	
+.a4 {
+	margin-right:33px;
+}	
+
+
+.a5 {
+    margin-right: 41px;
+    margin-top: 44px;
+}
+
+.a6 {
+    margin-right: 65px;
+    margin-top: 33px;
+}	
+
+
+.a7 {
+    margin-right: 48px;
+    margin-top: 39px;
+}
+
+.a8 {
+    margin-right: 33px;
+    margin-top: 39px;
+}
+
+.p22 {
+	margin-bottom:2px;
+}
+																								/***** Page 3 *****/
+
+
+.page3-img1 {
+    float: left;
+    margin-right: 21px;
+    margin-top: 6px;
+}
+
+.page3-box1 {
+	overflow:hidden;
+	margin-bottom:17px;
+}
+
+
+.p23 {
+	margin-bottom:19px;
+}
+
+.page3-img2 {
+	margin-top:5px;
+}
+
+.p24 {
+	padding-bottom:12px;
+}
+																									/***** Page 4 *****/
+
+
+
+.tr1 td {
+    color: #FFFFFF;
+	height:45px !important;
+    font-weight: bold;
+	padding:0px 0 0px 27px !important;
+}
+
+.tr1 {background:#1e1e1e; border-bottom:1px solid #c3c3c3;}
+
+.tabl1 {
+	border:1px solid #3a3a3a;
+	width:99%;
+}
+
+	
+	.grey {
+		background:#2c2c2c;
+	}
+	
+.p25 {
+	padding-bottom:14px;
+}
+
+
+
+.tabl1 td {
+	padding:0px 0 0px 11px;
+	vertical-align:middle;
+	height:30px;
+}
+
+.td2 {
+	text-align:center;
+}
+
+.list2 a {
+	color:#fff;
+	display:inline-block;
+	transition: all 0.4s ease 0s;	
+	font-weight:bold;
+	padding-right: 27px;
+		background:url(/assets/baltinterlogistik/marker4.png) no-repeat right 0 ;
+
+}
+.list2 a:hover {
+	color:#838383;
+	text-decoration:none;
+}
+
+
+.list2 li {
+	display:block;
+	line-height:15px;
+	padding-bottom:15px;
+}
+
+
+
+.p26 {
+	padding-right:18px;
+	padding-bottom:15px;
+}
+
+dl#accordion dt a {
+	display:block;
+	padding:0 !important;
+	margin:0 !important;
+	color:#8b8b8b;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	transition: all 0.4s ease 0s;
+}
+
+dl#accordion dt a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+
+dl#accordion dt {
+    background: url("/assets/baltinterlogistik/divider4.png") repeat-x scroll 0 bottom transparent;
+    border: medium none !important;
+    border-radius: 0 0 0 0;
+    color: #8B8B8B;
+    font-size: 12px;
+    margin: 0 !important;
+    padding: 20px 0 16px;
+}
+
+dl#accordion .ui-state-active {
+	background:none !important;
+	padding: 16px 0 8px !important;
+}
+
+dl#accordion dd {
+	border:none !important;
+	color:#8b8b8b;
+	margin:0 !important;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0 59px 0 0 !important;
+	line-height:20px;
+	font-size:12px;
+	background:url(/assets/baltinterlogistik/divider4.png) repeat-x 0 bottom;
+}
+
+
+dl#accordion {
+	background:url(/assets/baltinterlogistik/divider4.png) repeat-x 0 0;
+	margin:0 !important;
+	padding:0 !important;	
+}
+
+dl#accordion span {
+	display:none;
+}
+
+dl#accordion .ui-state-active a {
+	color:#fff !important;
+}
+
+
+#ui-accordion-accordion-header-0+dd {
+	display: none ;
+}
+.p27 {
+	padding-bottom:29px;
+}
+
+.p28 {
+	padding-top:8px;
+}
+	
+	
+.page4-box1 {
+	overflow:hidden;
+	margin-bottom:21px;
+	border-bottom:1px solid #232323;
+	padding-bottom:6px;
+}
+
+.p29 {
+	padding-top: 4px;
+}
+
+
+/***** Page 5 *****/
+
+
+.page6-img1 {
+	margin-bottom:28px;
+}
+																									
+.page6-box1 span {
+	display:block;
+	font-weight:bold;
+	color:#cacaca;
+}
+																								
+.dl1 dt {width:150px;}
+
+.dl1 span {float:left; width:69px;}
+
+.dl1 dd { line-height:19px;}
+
+.dl1 dd a {color:#fff;}
+
+.dl1 dd a:hover {color:#838383; text-decoration:none;}
+	
+/******************** Footer ******************/
+footer {
+	width:100%; 
+	padding:0 0 30px;
+}
+
+.foot-page1 {
+	float:left;
+	padding-top:24px;
+	color:#9b9b9b;
+	font-size:12px;
+}
+
+.foot-page1 a {
+	color:#9b9b9b;
+	transition: all 0.4s ease 0s;
+}
+
+
+.soc-links {
+    float: left;
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.soc-links a {
+	display:block;
+	width:38px;
+	height:37px;
+}
+
+.soc-links a:hover {
+	background-position:0 -56px;
+}
+
+.foot-menu {
+	padding-top:24px;
+	float:right;
+}
+
+.foot-menu a {
+	color:#9b9b9b;
+	font-weight:bold;
+	transition: all 0.4s ease 0s;
+	font-size:12px;
+	text-transform:uppercase;
+}
+
+.foot-menu a:hover,
+.foot-menu a.active {
+	color:#fff;
+	text-decoration:none;
+}
+
+.foot-menu li {
+	display:block;
+	float:left;
+	
+}
+
+.foot-menu li+li {
+margin-left:19px;
+
+}
+.soc-link1 {
+	background:url(/assets/baltinterlogistik/soc-link1.png) no-repeat 0 0 ;
+}
+.soc-link2 {
+	background:url(/assets/baltinterlogistik/soc-link2.png) no-repeat 0 0 ;
+}
+.soc-link3 {
+	background:url(/assets/baltinterlogistik/soc-link3.png) no-repeat 0 0 ;
+}
+.soc-link4 {
+	background:url(/assets/baltinterlogistik/soc-link4.png) no-repeat 0 0 ;
+}
+
+
+.soc-links li+li {
+	margin-left: 9px;
+}
+
+.soc-links li {
+	float:left;
+	display:block;
+}
+
+.foot-page1 a:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+.foot-main {
+	border-top:1px solid #1d1d1d;
+}
+
+
+
+#toTop {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:180px;
+	left: 50%;
+	margin-left: 550px;
+	overflow:hidden;
+	width:56px;
+	height: 33px;
+	border:none;
+	text-indent:-999px;
+	z-index:20;
+	background:url(/assets/baltinterlogistik/ui.totop.png) no-repeat left top;
+	transition: 0s ease;
+	-o-transition: 0s ease;
+	-webkit-transition: 0s ease;
+}
+#toTop:hover {
+	outline:none;
+	background-position: 0 bottom;
+}
+
+.ff_right {
+	float: right !important;  
+}
+
+
+figure iframe {
+	height: 250px;
+}
+
+figure img {
+	max-width: 100%;
+}
+
+#accordion {
+	height: 100%;
+}
+
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+
+@media only screen and (max-width: 995px) {
+ body {
+min-width:768px;
+}
+
+.foot-menu li+li {
+margin-left:10px;
+
+}
+
+dl#accordion dd {
+	padding-right: 0 !important;
+}
+
+dl#accordion .ui-state-active {
+	background:none !important;
+	    padding: 20px 0 16px !important;
+}
+
+
+.slider_wrapper {
+	height: 378px !important;
+}
+
+.page1-box4 .extra-wrap  {
+	overflow: hidden;
+}
+
+.extra-wrap {
+	overflow: visible;
+}
+
+.page1-box2 .inner2 {
+	padding-left: 20px !important;
+}
+
+.page1-box2 .inner1 {
+	padding-left: 20px !important;
+}
+
+
+.page1-box2 {
+	width: 25% !important;
+}
+
+ .map figure, .map figure iframe, #form input, #form textarea, #form .success {
+ width: 100% !important;
+ float: none;
+}
+ #form .success {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ -o-box-sizing: border-box;
+ box-sizing: border-box;
+}
+ .map figure {
+ height: auto !important;
+}
+
+.extra_wrapper {
+	overflow: visible ;
+}
+
+
+figure iframe {
+	width: 100%;
+}
+
+.camera_pag_ul {
+	left: 50% !important;
+	margin-left: -31px !important;
+}
+
+.head-inner2, .head-inner1 {
+	float: none;
+	padding-left: 0px;
+}
+.head-inner2 strong:first-child {
+	padding-left: 0 !important;
+}
+
+
+.a3  {
+	margin-right: 24px;
+}
+
+.a2 {
+	margin-right: 25px;
+}
+
+
+}
+ @media only screen and (max-width: 767px) {
+ body {
+min-width:420px;
+}
+
+a figure.fleft {
+	text-align: center;
+	width: auto;
+	margin-bottom: 25px;
+	display: block;
+	float: none;
+	margin: 25px 0 25px !important;
+}
+
+a figure.fleft img {
+	width: auto;
+}
+
+.slider_wrapper {
+	height: 239px !important;
+}
+
+.head-inner2 strong {
+	display: block;
+	padding-left: 0 !important;
+}
+
+.foot-page1 {
+	padding-top: 80px;
+}
+
+
+.soc-links {
+	position: absolute;
+	top: 20px;
+}
+
+h3 {
+	padding-top: 25px;
+}
+
+.page1-img1, .page1-img2 {
+    float: left !important;
+    margin-right: 17px !important;
+    width: auto !important;
+}
+
+.page1-box3 {
+	margin-bottom: 20px;
+}
+
+.page1-box1 {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.page1-box2 {
+	float: none !important;
+	margin-bottom: 25px;
+	width: 100% !important;
+}
+
+.foot-menu  {
+	display: none;
+}
+
+
+
+.caption {
+	top: 10px !important;
+}
+
+.head-box3  {
+	padding-bottom: 0;
+}
+
+.page1-box2 .inner2 {
+	padding-left: 40px !important;
+}
+
+.page1-box2 .inner1 {
+	padding-left: 40px !important;
+}
+
+header h1 a {
+	margin: 0 auto;
+}
+
+
+figure  img {
+	width: 100%;
+}
+
+
+.map address  {
+	float: none;
+	margin-right: 0px;
+}
+
+
+header {
+	background-position: center 100px;
+	position: relative;
+}
+header h1 {
+	float: none;
+	top: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+header h1 .logo {
+	margin: 0 auto;
+}
+
+.map figure iframe {
+	width: 100%;
+	height: 300px;
+}
+
+
+.map address {
+	float: none;
+	margin-right: 0;
+}
+
+#content .noresize {
+	width: auto !important;
+	float: left !important;
+	margin-right: 20px !important;
+}
+
+figure {
+	width: 100%;
+}
+
+.foot-page1 {
+	float: none;
+}
+.soc-links {
+	padding-left: 0;
+	float: none;
+	display: block;
+}
+
+figure {
+	margin-right: 0 !important;
+	margin-bottom: 20px;
+}
+
+.caption {
+	display: none;
+}
+
+}
+
+ @media only screen and (max-width: 479px) {
+
+.tabl1 td {
+	padding-left: 5px;
+	width: 30px;
+	height: auto;
+}
+
+.tr1 td {
+	padding-left: 5px !important;
+}
+
+.tabl1 {
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+}
+
+.banner i {
+	font-size: 20px !important;
+	line-height: 40px !important;
+}
+
+.caption {
+	left: 20px !important;
+}
+
+.text11 {
+	font-size: 20px !important;
+	line-height: 25px !important;
+	margin-bottom: 10px !important;
+}
+
+
+body {
+min-width:300px;
+}
+
+.slider_wrapper {
+	height: 188px !important;
+}
+
+
+}

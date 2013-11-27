@@ -1,0 +1,8 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:600);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400);
+.inner3 {behavior:url(js/PIE.htc);position:relative}
+
+.banner i {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+}

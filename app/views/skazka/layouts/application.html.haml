@@ -1,0 +1,154 @@
+!!! Strict
+%html{xmlns: "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %title Лесная сказка
+    %meta{content: "кафе сказка", name: "keywords"}/
+    %meta{content: "кафе сказка", name: "Overdose "}/    
+    %link{:href => "/assets/komfort-orm/reset.css", :rel => "stylesheet", :type => "text/css"}
+    %link{href: "http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic-ext", rel: "stylesheet", type: "text/css"}/
+    %link{:href => "/assets/skazka/style.css", :rel => "stylesheet", :type => "text/css"}
+  %body
+    #wrapper
+      #page
+        #content          
+          #logo
+            = image_tag '/assets/skazka/logo.png', class: 'logo'         
+            %h1
+              Кафе-бар
+              %span &laquo;Лесная сказка&raquo;
+            %p
+              телефон для справок:
+              %strong 254-63-01
+            = image_tag '/assets/skazka/zal.jpg', class: 'photo'           
+          .post
+            %h2.title
+              %a{href: "#"} Добро пожаловать на наш сайт!
+            -# %p.byline
+            -#   %small
+            -#     Posted on October 1st, 2007 by
+            -#     %a{href: "#"} Free CSS Templates
+            .entry
+              %p
+                Наш уютный 
+                %strong Кафе-бар "Лесная сказка" 
+                занимается организацией праздников, банкетов, корпоративных мероприятий, а также частных праздников, таких как свадьбы, дни рождения, юбилеи, вечеринки и пикники. У нас работают повара различных категорий, официанты, менеджеры, которые помогут сделать ваш праздник незабываемым.
+              %p
+                Мы учтем все Ваши пожелания и предложим оптимальную схему проведения праздничного банкета. От числа приглашенных на банкет - качество нашей работы не меняется!
+              %p
+                Мы стремимся к тому, чтобы атмосфера праздника была доступна каждому. Нас не смущает небольшой бюджет, оригинальные заявки и трудновыполнимые пожелания. Мы с радостью поможем организовать праздник! Никто не останется в стороне от музыки, танцев и веселья!
+              %p
+                Наш Зал вмещает от 10 до 100 гостей. 
+                %strong Стоимость от 500 рублей с человека. 
+                Отсутствие дополнительной арендной платы за закрытие кафе и обслуживание, удобный подъезд, наличие кондиционера, разрешение на свой алкоголь!!!
+              %p.links
+                %a.more{href: "#"} Наши координаты
+        #sidebar2.sidebar
+          %ul
+            %li
+              %h2 Навигация по сайту
+              %ul
+                %li
+                  %a{href: "#"} Главная страница
+                %li
+                  %a{href: "#"} Наше меню
+                %li
+                  %a{href: "#"} Отзывы
+                %li
+                  %a{href: "#"} Контактная информация
+              -# %p
+              -#   %a{href: "#"} dolor
+              -#   %a{href: "#"} ipsum
+              -#   %a{href: "#"} lorem
+              -#   %a{href: "#"} sit amet
+              -#   %a{href: "#"} dolor
+              -#   %a{href: "#"} ipsum
+              -#   %a{href: "#"} lorem
+              -#   %a{href: "#"} sit amet, integer nisl risus, sagittis convallis, rutrum id, elementum congue
+            %li
+              %h2 Мероприятия
+              #calendar_wrap
+                %table{summary: "Calendar"}
+                  %caption Октябрь 2013
+                  %thead
+                    %tr
+                      %th{abbr: "Понедельник", scope: "col", title: "Понедельник"} Пн
+                      %th{abbr: "Вторник", scope: "col", title: "Tuesday"} Вт
+                      %th{abbr: "Среда", scope: "col", title: "Wednesday"} Ср
+                      %th{abbr: "Четверг", scope: "col", title: "Thursday"} Чт
+                      %th{abbr: "Пятница", scope: "col", title: "Friday"} Пт
+                      %th{abbr: "Суббота", scope: "col", title: "Saturday"} Сб
+                      %th{abbr: "Воскресенье", scope: "col", title: "Sunday"} Вс
+                  %tfoot
+                    %tr
+                      %td#prev{abbr: "February", colspan: "3"}
+                        %a{href: "#", title: ""} « Сент
+                      %td.pad  
+                      %td#next{abbr: "April", colspan: "3"}
+                        %a{href: "#", title: ""} Нояб »
+                  %tbody
+                    %tr
+                      %td.pad{colspan: "5"}  
+                      %td 1
+                      %td 2
+                    %tr
+                      %td 3
+                      %td 4
+                      %td 5
+                      %td 6
+                      %td 7
+                      %td 8
+                      %td 9
+                    %tr
+                      %td 10
+                      %td#today 11
+                      %td 12
+                      %td 13
+                      %td 14
+                      %td 15
+                      %td 16
+                    %tr
+                      %td 17
+                      %td 18
+                      %td 19
+                      %td 20
+                      %td 21
+                      %td 22
+                      %td 23
+                    %tr
+                      %td 24
+                      %td 25
+                      %td 26
+                      %td 27
+                      %td 28
+                      %td 29
+                      %td 30
+                    %tr
+                      %td 31
+                      %td.pad{colspan: "6"}  
+            %li
+              %h2 Наши предложения
+              %ul
+                %li
+                  %a{href: "#"} Банкет на 10 человек
+                %li
+                  %a{href: "#"} Банкет на 20 человек
+                %li
+                  %a{href: "#"} Банкет на 50 человек
+                %li
+                  %a{href: "#"} Банкет на 100 человек
+        %div{style: "clear:both"}  
+      #footer
+        .fleft
+          %p
+            &copy;
+            2013 Все права защищены
+        .fright
+          %p
+            Создание и поддержка сайта
+            %a{href: "http://mlip.ru"} MLIP
+        .fcenter
+          %p
+            Воронеж, ул. Богдана Хмельницкого, 26,
+            = link_to 'Кафе-бар "Лесная сказка"', root_path
+        .fclear

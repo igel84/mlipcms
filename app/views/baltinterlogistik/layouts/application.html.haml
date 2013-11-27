@@ -1,0 +1,169 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title= @page.try(:title) || @post.try(:title)
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "telephone=no", :name => "format-detection"}/
+    %link{:href => "/assets/baltinterlogistik/favicon.ico", :rel => "icon"}/
+    %link{:href => "/assets/baltinterlogistik/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "/assets/baltinterlogistik/style.css", :rel => "stylesheet"}/    
+    %link{:href => "/assets/baltinterlogistik/form.css", :rel => "stylesheet"}/
+
+    %script{:src => "/assets/baltinterlogistik/jquery.js"}
+    %script{:src => "/assets/baltinterlogistik/jquery-migrate-1.1.1.js"}
+    %script{:src => "/assets/baltinterlogistik/script.js"}
+    %script{:src => "/assets/baltinterlogistik/superfish.js"}
+    %script{:src => "/assets/baltinterlogistik/jquery.equalheights.js"}
+    %script{:src => "/assets/baltinterlogistik/jquery.mobilemenu.js"}
+    %script{:src => "/assets/baltinterlogistik/jquery.easing.1.3.js"}
+    %script{:src => "/assets/baltinterlogistik/jquery-ui-1.10.3.custom.js"}
+    %script{:src => "/assets/baltinterlogistik/forms.js"}
+    
+    - if @page && @page.home?
+      %link{:href => "/assets/baltinterlogistik/camera.css", :rel => "stylesheet"}
+      %script{:src => "/assets/baltinterlogistik/camera.js"}
+      / [if (gt IE 9)|!(IE)]><!
+      %script{:src => "/assets/baltinterlogistik/jquery.mobile.customized.min.js"}
+      / <![endif]
+      :javascript
+        $(document).ready(function(){
+          jQuery('#camera_wrap').camera({
+            loader: false,
+            pagination: true,
+            thumbnails: false,
+            height: '42.34042553191489%',
+            caption: true,
+            navigation: true,
+            fx: 'mosaic'
+          }); 
+        });          
+    :javascript
+      $(document).ready(function(){
+        jQuery("#accordion").accordion({
+          collapsible: true,
+          heightStyle: "content",
+          active: false,
+        });
+      });
+    /[if lt IE 8]
+      <div style=' clear: both; text-align:center; position: relative;'>
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://storage.ie6countdown.com/assets/100//assets/baltinterlogistik/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+      </a>
+      </div>
+    /[if lt IE 9]
+      <script src="/assets/baltinterlogistik/html5shiv.js"></script>
+      <link rel="stylesheet" media="screen" href="/assets/baltinterlogistik/ie.css">
+  %body#page1
+    / ==============================header=================================
+    %header
+      .head-box1
+        .container_12
+          .head-inner1
+            %a{:href => "#"} Аrсhitеkt g. 56-101, LT-04111 Vilnius, Lithuania
+          .head-inner2
+            %strong
+              = t('views.phone')
+              %span +375 296 66 46 00
+            %strong.p6
+              = t('views.fax')
+              %span +375 17 314 13 25
+            %strong
+              %span= link_to t('views.site_baltinterlogistic'), root_path
+            %strong
+              -#E-mail:
+              %span
+                %a{:href => "#"} baltinterlogistic@gmail.com
+          .clear
+      .head-box2
+        .head-box3
+          .container_12
+            .head-box4.p16{style:'padding-bottom:10px;'} 
+              %h1
+                %a.logo{:href => "/"}
+                  %img{:alt => "transco", :src => "/assets/baltinterlogistik/logo4#{I18n.locale}.png"}/
+              %nav
+                %ul.sf-menu
+                  / %li
+                  /   %a{:href => "/about"} About
+                  /   %ul
+                  /     %li
+                  /       %a{:href => "#"} Dolore ipsu
+                  /     %li
+                  /       %a{:href => "#"} Consecte
+                  /       %ul
+                  /         %li
+                  /           %a{:href => "#"} Dolore ipsu
+                  /         %li
+                  /           %a{:href => "#"} Consecte
+                  /         %li
+                  /           %a{:href => "#"} Elit Conseq
+                  /     %li
+                  /       %a{:href => "#"} Elit Conseq
+                  -#%li.home_li{class: "#{'current' if current_page?('/')}"}
+                  -#  %a.home{:href => "/", class: "#{'active' if current_page?('/')}"} Home
+                  - @top_menu.each do |menu|
+                    %li{class: "#{'current' if current_page?(page_link_path(menu.slug)); 'last3' if @top_menu.last == menu; 'home_li' if menu == @top_menu.first}"}
+                      = link_to menu.title, page_link_path(menu.slug), class: "#{'active' if current_page?(page_link_path(menu.slug)); 'home' if menu == @top_menu.first}"
+                      - unless menu.children.empty?
+                        %ul{style:'width:200px'}
+                          - menu.children.each do |sub_menu|
+                            %li= link_to sub_menu.title, page_link_path(sub_menu.slug)                
+                .clear              
+              .clear
+            .localization{style: 'text-align:right;padding-bottom:10px;margin-right:20px;'}  
+              = link_to image_tag('/assets/baltinterlogistik/ru.png', width:30), 'http://baltinterlogistic.ru'
+              = link_to image_tag('/assets/baltinterlogistik/en.png', width:30), 'http://baltinterlogistic.com'
+            .clear
+          - if @page && @page.home?
+            .slider_wrapper
+              .container_12
+                .grid_12
+                  #camera_wrap
+                    %div{"data-src" => "/assets/baltinterlogistik/slide-1.jpg"}
+                      .banner.caption.fadeIn
+                        %i= t('views.banner1.title')
+                        %strong.text11= t('views.banner1.content')
+                        %a.button1{:href => "#"}
+                          = t('views.more')
+                          %span
+                    %div{"data-src" => "/assets/baltinterlogistik/slide-2.jpg"}
+                      .banner.caption.fadeIn
+                        %i= t('views.banner2.title')
+                        %strong.text11= t('views.banner2.content')
+                        %a.button1{:href => "#"}
+                          = t('views.more')
+                          %span
+                    %div{"data-src" => "/assets/baltinterlogistik/slide-3.jpg"}
+                      .banner.caption.fadeIn
+                        %i.color3= t('views.banner3.title')
+                        %strong.text11.color2= t('views.banner3.content')
+                        %a.button1{:href => "#"}
+                          = t('views.more')
+                          %span
+              .bot_bg
+    / ==============================content================================
+    = yield
+    / ==============================footer=================================
+    %footer
+      .container_12
+        .foot-main.grid_12
+          %ul.foot-menu
+            - @top_menu.each do |menu|
+              %li= link_to menu.title, page_link_path(menu.slug), class: "#{'active' if current_page?(page_link_path(menu.slug))}"
+          .foot-page1  
+            %strong= t('views.baltinterlogistic')
+            \© 2013 |
+            -#%a{:href => "index-6.html"} Privacy Policy
+            .clear
+            / {%FOOTER_LINK}
+          %ul.soc-links
+            %li
+              %a.soc-link1{:href => "#"}
+            %li
+              %a.soc-link2{:href => "#"}
+            %li
+              %a.soc-link3{:href => "#"}
+            %li
+              %a.soc-link4{:href => "#"}
+          .clear

@@ -1,0 +1,366 @@
+
+
+ /**************************
+*
+*	GENERAL
+*
+**************************/
+
+.slider_wrapper {
+	overflow: hidden;
+	height: 459px;
+	position: relative;
+}
+
+.camera_wrap {
+	position: relative;
+	display: none;
+	z-index: 900;
+	margin-bottom: 0 !important;
+}
+
+.camera_wrap img {
+	max-width: 10000px;
+}
+
+.camera_fakehover {
+	height: 100%;
+	min-height: 60px;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+.camera_wrap {
+	width: 100%;
+}
+.camera_src {
+	display: none;
+}
+.cameraCont, .cameraContents {
+	height: 100%;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+.cameraSlide {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+.cameraContent {
+	bottom: 0;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+.camera_target {
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	text-align: left;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+.camera_overlayer {
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+.camera_target_content {
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+.camera_target_content .camera_link {
+    background: url(/assets/baltinterlogistik/blank.gif);
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+.camera_loader {
+    background: #fff url(/assets/baltinterlogistik/camera-loader.gif) no-repeat center;
+	background: rgba(255, 255, 255, 0.9) url(/assets/baltinterlogistik/camera-loader.gif) no-repeat center;
+	border: 1px solid #ffffff;
+	border-radius: 18px;
+	height: 36px;
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	margin: -18px 0 0 -18px;
+	top: 50%;
+	width: 36px;
+	z-index: 3;
+}
+
+.camera_nav_cont {
+	height: 65px;
+	overflow: hidden;
+	position: absolute;
+	right: 9px;
+	top: 15px;
+	width: 120px;
+	z-index: 4;
+}
+.camerarelative {
+	overflow: hidden;
+	position: relative;
+}
+.imgFake {
+	cursor: pointer;
+}
+.camera_commands > .camera_stop {
+	display: none;	
+}
+
+
+.slide_wrapper .camera_prev{
+	background: url(/assets/baltinterlogistik/prevnext_bg.png) 0 0 repeat;
+	width: 70px;	
+	top: 0 !important;
+	height: auto !important;
+	bottom: 0;
+	left: -80px;
+	display: block;
+	position: absolute;
+	opacity: 1 !important;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.slide_wrapper .camera_prev>span {
+	background: url(/assets/baltinterlogistik/prev.png) center 0 no-repeat;
+	top: 50%;
+		
+	margin-top: -10px;
+	position: absolute;
+	display: block;
+	white-space: 23px;
+	height: 20px;
+	left: 0;
+	right: 0;
+}
+
+.slide_wrapper .camera_next>span {
+	background: url(/assets/baltinterlogistik/next.png) center 0 no-repeat;
+	top: 50%;
+	margin-top: -10px;
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	white-space: 23px;
+	height: 20px;
+}
+
+
+
+.slide_wrapper .camera_next {
+	background: url(/assets/baltinterlogistik/prevnext_bg.png) 0 0 repeat;
+	width: 70px;	
+	top: 0  !important;
+	bottom: 0;
+	height: auto !important;
+
+	right: -80px;
+	display: block;
+	position: absolute;
+	opacity: 1 !important;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+
+.camera_thumbs_cont > div {
+	float: left;
+	width: 100%;
+}
+.camera_thumbs_cont ul {
+	overflow: hidden;
+	padding: 3px 4px 8px;
+	position: relative;
+	text-align: center;
+}
+.camera_thumbs_cont ul li {
+	display: inline;
+	padding: 0 4px;
+}
+.camera_thumbs_cont ul li > img {
+	border: 1px solid;
+	cursor: pointer;
+	margin-top: 5px;
+	vertical-align:bottom;
+}
+.camera_clear {
+	display: block;
+	clear: both;
+}
+.showIt {
+	display: none;
+}
+.camera_clear {
+	clear: both;
+	display: block;
+	height: 1px;
+	margin: -1px 0 25px;
+	position: relative;
+}
+
+
+
+.caption {
+   left: 54px;
+    overflow: hidden;
+    position: absolute;
+    top: 132px;
+    width: 480px;
+    z-index: 15;
+}
+
+
+	.banner i {
+		display:block;
+		text-transform:uppercase;
+		color:#fff;
+		opacity:0.4;
+		font-family: 'Open Sans', sans-serif;
+		font-size:35px;
+		font-style:normal;
+		line-height:42px;
+		font-weight:600;
+	}
+
+.text11{
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 61px;
+	margin-bottom:22px;
+    margin-top: -7px;
+    text-transform: uppercase;
+}
+
+
+/**************************
+*
+*	COLORS & SKINS
+*
+**************************/
+
+
+.camera_pag  {
+ background: url("/assets/baltinterlogistik/shadow.png") no-repeat scroll center 0 transparent;
+    bottom: -61px;
+    display: block;
+    height: 61px;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.camera_pag_ul {
+	overflow: hidden;
+    top: 20px;
+    display: inline-block;
+    height: 16px;
+    left: 438px;
+    position: absolute;
+    z-index: 60;
+}
+
+.camera_pag ul li {
+	float:left;
+		font-size:0;
+		line-height:0;
+		margin:0;
+}
+
+.camera_pag ul li+li {
+	margin-left: 7px;
+}
+
+
+.camera_pag ul li span {
+			display:block;
+			width:16px;
+			height:16px;
+			background:url(/assets/baltinterlogistik/pagin-a.png) left 0px no-repeat;
+			font-size:0;
+			line-height:0;
+			cursor: pointer;
+			text-decoration:none;
+			overflow: hidden;
+			text-indent: -999px;
+}
+
+.camera_pag ul li:hover span, .camera_pag ul li.cameracurrent span {
+				background-position:0 -44px;
+
+}
+
+			.color2 {
+				color:#383839 !important;
+			}
+			
+			.color3 {
+				color:#171717 !important;
+			}
+
+/*
+
+.camera_prev {
+	 background: url("/assets/baltinterlogistik/prev.png") no-repeat scroll 0 0 transparent;
+    bottom: 259px;
+    display: block;
+    height: 51px;
+    left: 332px;
+    position: absolute;
+    width: 34px;
+    z-index: 15;
+    opacity: 1px !important;
+}
+
+
+.camera_next {
+    background: url("/assets/baltinterlogistik/next.png") no-repeat scroll 0 0 transparent;
+    bottom: 259px;
+    display: block;
+    height: 51px;
+    position: absolute;
+    right: 329px;
+    width: 34px;
+    z-index: 15;
+	opacity: 1 !important;
+
+}
+
+
+.camera_prev:hover, .camera_next:hover{
+	background-position: 0 -105px;
+	cursor: pointer;
+}
+
+*/

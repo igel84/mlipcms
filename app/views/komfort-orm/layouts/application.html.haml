@@ -1,0 +1,76 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+    %meta{:content => "7af20d2c4b607869", :name => "yandex-verification"}
+    = header
+    %link{:href => "/assets/komfort-orm/reset.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/assets/komfort-orm/style.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/assets/komfort-orm/favicon.ico", :rel => "icon"}
+    %link{:href => "/assets/komfort-orm/favicon.ico", :rel => "shortcut icon"}    
+    = fancybox_script
+    = attachment_script
+    :css
+      .addr {display:inline;float:left;}
+      address {display:inline;color:#76AEDB;font-style:normal;font-weight:bold;}
+  %body
+    / start header
+    #header
+      #menu
+        %ul
+          %li{class:"#{current_page?(root_path) == true ? 'active' : ''}"}= link_to 'Главная', root_path
+          %li{class:"#{current_page?(galery_link_path((Galery.where(site_id: Site.current_site_id).first).slug)) == true ? 'active' : ''}"}= link_to 'Галлерея', galery_link_path((Galery.where(site_id: Site.current_site_id).first).slug)
+          - uslugi = Page.where(site_id: Site.current_site_id, slug: 'uslugi').first
+          %li{class:"#{current_page?(page_link_path(uslugi.slug)) == true ? 'active' : ''}"}= link_to 'Услуги', page_link_path(uslugi.slug)
+          - kontakty = Page.where(site_id: Site.current_site_id, slug: 'kontakty--3').first
+          %li{class:"#{current_page?(page_link_path(kontakty.slug)) == true ? 'active' : ''}"}= link_to 'Контакты', page_link_path(kontakty.slug)
+      #logo
+        %h1
+          %a{:href => "/", title: 'ООО Комфорт Воронеж - продажа и установка кондиционеров JAX DANTEX MDV GREE, производство и монтаж вентиляции, водостоки, желоба'} Комфорт
+        %h2
+          %a{:href => "/", title: 'ООО Комфорт Воронеж - продажа и установка кондиционеров JAX DANTEX MDV GREE, производство и монтаж вентиляции, водостоки, желоба'} вентиляция, кондиционирование, аспирация и противодымная защита
+    / end header
+    / start page
+    #page
+      / start content
+      #content
+        = yield
+        / .post
+        /   %p.date
+        /     September
+        /     %b 30th
+        /   %h1.title Welcome to Our Website!
+        /   %p.meta
+        /     %small
+        /       Filed under
+        /       %a{:href => "#"} Uncategorized
+        /       \&nbsp;|&nbsp;
+        /       %a{:href => "#"} Comments (12)
+      #sidebar
+        %ul
+          %li
+            %h2 Полезная информация
+            %ul
+              - @sub_menu.each do |menu|
+                %li= link_to menu.title, page_link_path(menu.slug), title: menu.keywords
+      / end sidebar
+    / end page
+    #footer
+      .fleft
+        %p.addr
+          &copy
+          %strong Комфорт
+          &nbsp;
+          2013
+          &nbsp;
+        %address Воронеж
+      .fright
+        %p
+          %a{:href => "http://mlip.ru", :title => "Студия веб-дизайна МЛИП"} Создание и продвижение сайта - МЛИП
+      .fcenter
+        %p Вентиляция и кондиционирование
+    :javascript
+      (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter21697558 = new Ya.Metrika({id:21697558, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+    %noscript
+      %div
+        %img{:alt => "", :src => "//mc.yandex.ru/watch/21697558", :style => "position:absolute; left:-9999px;"}

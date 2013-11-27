@@ -1,0 +1,6 @@
+- if current_user.role?(:admin)
+  =# form.select :site_id, options_from_collection_for_select(Site.all, :id, :name), {:include_blank => true}
+  = form.collection_select :site_id, Site.all, :id, :name, prompt: true
+- else
+  = current_user.sites.first.alias
+  = form.hidden_field :site_id, value: current_user.sites.first.id

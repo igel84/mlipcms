@@ -1,0 +1,31 @@
+!!!
+%html{:lang => "ru-ru", "xml:lang" => "ru-ru", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}/
+    %meta{:content => "mlip", :name => "author"}/
+    -#%title Прокат Автомобилей - Московский
+    = header
+    :css
+      #wrapper { margin: 0 auto; width: 1100px;padding:0;}
+      .s-c-s #colmid { left:0px;}
+      .s-c-s #colright { margin-left:-0px;}
+      .s-c-s #col1pad { margin-left:0px;}
+      .s-c-s #col2 { left:0px;width:0px;}
+      .s-c-s #col3 { width:0px;}
+      
+      .s-c-x #colright { left:0px;}
+      .s-c-x #col1wrap { right:0px;}
+      .s-c-x #col1 { margin-left:0px;}
+      .s-c-x #col2 { right:0px;width:0px;}
+      
+      .x-c-s #colright { margin-left:-0px;}
+      .x-c-s #col1 { margin-left:0px;}
+      .x-c-s #col3 { left:0px;width:0px;}
+    %link{:href => "/assets/prokat/style.css", :rel => "stylesheet", :type => "text/css"}
+    /[if lte IE 6]
+      %script{type:"text/javascript", src:"/templates/rt_afterburner/js/ie_suckerfish.js"}
+      %link{rel:"stylesheet", href:"/templates/rt_afterburner/css/styles.ie.css", type:"text/css"}
+    /[if lte IE 7]
+      %link{rel:"stylesheet", href:"/templates/rt_afterburner/css/styles.ie7.css", type:"text/css"}
+  %body
+    = yield

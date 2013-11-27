@@ -1,0 +1,130 @@
+!!! Strict
+%html{xmlns: "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "content-type"}
+    %meta{name:'yandex-verification', content:'413978d7712bca06'}
+    = header
+    = yield :head
+    %link{:href => "/assets/reset.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:rel=>"shortcut icon", :href=>'/assets/lesnaya-skazka-vrn/favicon.ico', type: "image/x-icon"}
+    %link{href: "http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic-ext", rel: "stylesheet", type: "text/css"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic", rel: "stylesheet", type: "text/css"}
+    %link{:href => "/assets/lesnaya-skazka-vrn/style.css", :rel => "stylesheet", :type => "text/css"}
+    
+    %script{src: "http://code.jquery.com/jquery-1.9.1.js"}
+    %script{src: "http://code.jquery.com/ui/1.10.3/jquery-ui.js"}
+    :javascript
+      $(function() {
+        $.datepicker.regional['ru'] = { 
+          closeText: 'Закрыть', 
+          prevText: 'Предыдущий месяц', 
+          nextText: 'Следующий месяц', 
+          currentText: 'Сегодня', 
+          monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 
+          'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'], 
+          monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 
+          'Июл','Авг','Сен','Окт','Ноя','Дек'], 
+          dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'], 
+          dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'], 
+          dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'], 
+          dateFormat: 'dd.mm.yy', 
+          firstDay: 1, 
+          isRTL: false 
+          }; 
+        $.datepicker.setDefaults($.datepicker.regional['ru']); 
+        $("#calendar").datepicker(); //'option', $.datepicker.regional["ru"]
+      });
+  %body
+    #wrapper
+      #page
+        #content          
+          #logo
+            = image_tag '/assets/lesnaya-skazka-vrn/logo.png', class: 'logo'         
+            %h1
+              Кафе-бар
+              %span &laquo;Лесная сказка&raquo;
+            %p
+              телефон для справок:
+              %strong 221-33-33            
+          .post
+            - if @page.home?
+              .photo= image_tag '/assets/lesnaya-skazka-vrn/kafe-bar-lesnaya-skazka.jpg'
+            = yield
+            -# %h2.title
+            -#   %a{href: "#"} Добро пожаловать на наш сайт!
+            -# %p.byline
+            -#   %small
+            -#     Posted on October 1st, 2007 by
+            -#     %a{href: "#"} Free CSS Templates
+            -# .entry
+            -#   %p
+            -#     Наш уютный 
+            -#     %strong Кафе-бар "Лесная сказка" 
+            -#     занимается организацией праздников, банкетов, корпоративных мероприятий, а также частных праздников, таких как свадьбы, дни рождения, юбилеи, вечеринки и пикники. У нас работают повара различных категорий, официанты, менеджеры, которые помогут сделать ваш праздник незабываемым.
+            -#   %p
+            -#     Мы учтем все Ваши пожелания и предложим оптимальную схему проведения праздничного банкета. От числа приглашенных на банкет - качество нашей работы не меняется!
+            -#   %p
+            -#     Мы стремимся к тому, чтобы атмосфера праздника была доступна каждому. Нас не смущает небольшой бюджет, оригинальные заявки и трудновыполнимые пожелания. Мы с радостью поможем организовать праздник! Никто не останется в стороне от музыки, танцев и веселья!
+            -#   %p
+            -#     Наш Зал вмещает от 10 до 100 гостей. 
+            -#     %strong Стоимость от 500 рублей с человека. 
+            -#     Отсутствие дополнительной арендной платы за закрытие кафе и обслуживание, удобный подъезд, наличие кондиционера, разрешение на свой алкоголь!!!
+        #sidebar2.sidebar
+          %ul
+            %li
+              %h2 Навигация по сайту
+              %ul
+                - @top_menu.order('position').each do |page|
+                  %li= link_to(page.name, "#{page.home? ? '/' : page_link_path(page.slug)}", title: truncate(page.description, length: 100, ommission: '...'), class: "#{'current' if current_page?(page_link_path(page.slug))}")
+                -# %li
+                -#   %a{href: "#"} Главная страница
+                -# %li
+                -#   %a{href: "#"} Наше меню
+                -# %li
+                -#   %a{href: "#"} Отзывы
+                -# %li
+                -#   %a{href: "#"} Контактная информация
+              -# %p
+              -#   %a{href: "#"} dolor
+              -#   %a{href: "#"} ipsum
+              -#   %a{href: "#"} lorem
+              -#   %a{href: "#"} sit amet
+              -#   %a{href: "#"} dolor
+              -#   %a{href: "#"} ipsum
+              -#   %a{href: "#"} lorem
+              -#   %a{href: "#"} sit amet, integer nisl risus, sagittis convallis, rutrum id, elementum congue
+            %li
+              %h2 Мероприятия
+              #calendar.calendar
+            = sub_menu('li')
+            -# %li
+            -#   %h2 Наши предложения
+            -#   %ul
+            -#     %li
+            -#       %a{href: "#"} Банкет на 10 человек
+            -#     %li
+            -#       %a{href: "#"} Банкет на 20 человек
+            -#     %li
+            -#       %a{href: "#"} Банкет на 50 человек
+            -#     %li
+            -#       %a{href: "#"} Банкет на 100 человек
+        %div{style: "clear:both"}  
+      #footer
+        .fleft
+          %p
+            &copy;
+            2013 Все права защищены
+        .fright
+          %p
+            Создание и поддержка сайта
+            %a{href: "http://mlip.ru"} MLIP
+        .fcenter
+          %p
+            Воронеж, ул. Богдана Хмельницкого, 28 -
+            = link_to 'Кафе-бар "Лесная сказка"', root_path
+        .fclear
+      :javascript
+        (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter23112115 = new Ya.Metrika({id:23112115, webvisor:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+      %noscript
+        %div
+          %img{alt: "", src: "//mc.yandex.ru/watch/23112115", style: "position:absolute; left:-9999px;"}/

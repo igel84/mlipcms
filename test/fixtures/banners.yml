@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title_1: MyString
+  title_2: MyString
+  title_3: MyString
+  title_4: MyString
+  body: MyString
+  image: MyString
+  visible: false
+
+two:
+  title_1: MyString
+  title_2: MyString
+  title_3: MyString
+  title_4: MyString
+  body: MyString
+  image: MyString
+  visible: false

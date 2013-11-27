@@ -1,0 +1,30 @@
+:css
+  #content img { float: left; padding: 10px 10px 0 0;  }
+%section#content
+  .container_12
+    .wrapper.p15
+      %article.grid_8
+        %h3= @page.title
+        != @page.body
+      %article.grid_4
+        %h3= t('views.last_post')
+        - Post.order('created_at DESC').limit(5).each do |post|
+          .page2-box1{style: 'text-align:right'}
+            .inner3
+              - if post.show_date
+                %time{:datetime => post.show_date}
+                  = post.show_date.day
+                  %span= l(post.show_date.to_date, format: :month)
+              - else
+                %time{:datetime => post.created_at}
+                  = post.created_at.day
+                  %span= l(post.created_at.to_date, format: :month)
+            .extra-wrap.p20{style: 'text-align:left'}
+              = link_to post.title, post, class: 'link3'
+            .clear
+            %p.p21{style: 'text-align:left;margin-left:60px;'}= post.preview
+            = link_to t('views.more'), post
+        -# %h3= t('views.last_post')
+        -# - Post.order('created_at DESC').limit(5).each do |post|
+        -#   = link_to post.title, post, class: 'link1'
+        -#   %p.p19= post.preview

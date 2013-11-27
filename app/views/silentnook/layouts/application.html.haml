@@ -1,0 +1,316 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title 39114 template preview
+    %meta{:charset => "utf-8"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Alex+Brush", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/assets/silentnook/reset.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/assets/silentnook/layout.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/assets/silentnook/style.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "/assets/silentnook/jquery-1.7.2.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/jquery.easing.1.3.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/jquery-ui-1.8.11.custom.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/jquery.transform-0.9.3.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/jquery.animate-colors-min.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/jquery.backgroundpos.min.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/mathUtils.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/superfish.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/switcher.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/jquery.mousewheel.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/sprites.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/hoverSprite.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/slider.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/cScroll.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/forms.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/bgStretch.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/sImg.js", :type => "text/javascript"}
+    %script{:src => "/assets/silentnook/scripts.js", :type => "text/javascript"}
+    /[if lt IE 9]
+      <script type="text/javascript" src="/assets/silentnook/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+    /[if lt IE 8]
+      <div style=' clear: both; text-align:center; position: relative;'>
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+      </div>
+    %script{:src => "/assets/silentnook/scripts.js", :type => "text/javascript"}
+    /[if lt IE 9]
+      <script type="text/javascript" src="/assets/silentnook/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+    /[if lt IE 8]
+      <div style=' clear: both; text-align:center; position: relative;'>
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100//assets/silentnook/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+      </div>
+  %body
+    .glob
+      -#.page_spinner
+      #bgStretch
+        %img{:alt => "", :src => "/assets/silentnook/bgPic.jpg"}/
+      .main
+        .center
+          .headerHolder
+            %header
+              .logoHolder
+                %h1
+                  %a#logo{:href => "#!/pageHome"} SILENTNOOK
+            .menuHolder
+              %nav.menu
+                %ul#menu
+                  %li
+                    %a{:href => "#!/pageHome"}
+                      %span.mText home
+                  %li
+                    %a{:href => "#!/pageAbout"}
+                      %span.mText домашняя
+                  %li
+                    %a{:href => "#!/pageNews"}
+                      %span.mText новости
+                  %li.with_ul
+                    %a{:href => "#!/pagePeception"}
+                      %span.mText peception
+                    %ul.submenu_1
+                      %li.magTop2
+                        %a{:href => "#!/pageMusic"} музыка
+                      %li
+                        %a{:href => "#!/pagePhotos"} фотографии
+                      %li
+                        %a{:href => "#!/pageThangs"} благодарности                      
+                  %li.bgNone
+                    %a{:href => "#!/pageContact"}
+                      %span.mText контакты
+          %article#content
+            %ul
+              %li#pageHome
+              %li#pageAbout
+                .closeButton
+                  %a{:href => "#!/pageHome"}
+                    %img{:alt => "", :src => "/assets/silentnook/closeButton.png"}/
+                %figure.figure2
+                  %img{:alt => "", :src => "/assets/silentnook/page1pic1.png"}/
+                .box
+                  .containerContent
+                    .col1
+                      %h2 Добро пожаловать!
+                      .scroll1
+                        .inner
+                          %p
+                            Информация о группе...
+                      %a.more.magTop1{:href => "#!/pageMore"} читать далее...
+              %li#pageNews
+                .closeButton
+                  %a{:href => "#!/pageHome"}
+                    %img{:alt => "", :src => "/assets/silentnook/closeButton.png"}/
+                .box
+                  .containerContent
+                    .col3 
+                      %h2.padBot2 Новости группы                     
+                      .scroll3
+                        %p.padBot3
+                          %span.color2 Информация...
+                          %br/
+                          информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация...
+                        %p.padBot4
+                          %span.color2 Информация...
+                          %br/
+                          информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация...
+                        %p.padBot4
+                          %span.color2 Информация...
+                          %br/
+                          информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация...
+                        %p.padBot4
+                          %span.color2 Информация...
+                          %br/
+                          информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация, информация...
+              %li#pageMusic
+                .closeButton
+                  %a{:href => "#!/pageHome"}
+                    %img{:alt => "", :src => "/assets/silentnook/closeButton.png"}/
+                .box
+                  .containerContent
+                    .col3
+                      %h2.padBot2 Композиции
+                      .scroll3
+                        %ul._list
+                          %li
+                            %p
+                              %span.color3 1. Первая песня
+                              %br/
+                              Описание песни
+                            .playButton
+                              %a{:href => "/", :target => "_blank"}
+                                %img{:alt => "", :src => "/assets/silentnook/playButton.png"}/
+                            .buyButton
+                              %a{:href => "#"}
+                                %img{:alt => "", :src => "/assets/silentnook/buyButton.png"}/
+                          %li
+                            %p
+                              %span.color3 2. Вторая песня
+                              %br/
+                              Описание песни
+                            .playButton
+                              %a{:href => "/", :target => "_blank"}
+                                %img{:alt => "", :src => "/assets/silentnook/playButton.png"}/
+                            .buyButton
+                              %a{:href => "#"}
+                                %img{:alt => "", :src => "/assets/silentnook/buyButton.png"}/
+                          %li
+                            %p
+                              %span.color3 3. Третья песня
+                              %br/
+                              Описание песни
+                            .playButton
+                              %a{:href => "/", :target => "_blank"}
+                                %img{:alt => "", :src => "/assets/silentnook/playButton.png"}/
+                            .buyButton
+                              %a{:href => "#"}
+                                %img{:alt => "", :src => "/assets/silentnook/buyButton.png"}/
+                          %li
+                            %p
+                              %span.color3 4. Четвертая песня
+                              %br/
+                              Описание песни
+                            .playButton
+                              %a{:href => "/", :target => "_blank"}
+                                %img{:alt => "", :src => "/assets/silentnook/playButton.png"}/
+                            .buyButton
+                              %a{:href => "#"}
+                                %img{:alt => "", :src => "/assets/silentnook/buyButton.png"}/
+                          %li
+                            %p
+                              %span.color3 5. Пятая песня
+                              %br/
+                              Описание песни
+                            .playButton
+                              %a{:href => "/", :target => "_blank"}
+                                %img{:alt => "", :src => "/assets/silentnook/playButton.png"}/
+                            .buyButton
+                              %a{:href => "#"}
+                                %img{:alt => "", :src => "/assets/silentnook/buyButton.png"}/
+              %li#pagePhotos
+                .closeButton
+                  %a{:href => "#!/pageHome"}
+                    %img{:alt => "", :src => "/assets/silentnook/closeButton.png"}/
+                .box
+                  .containerContent
+                    .col3
+                      %h2.padBot6 Фотогаллерея
+                      .scroll3
+                        %figure.figure1.magRight1
+                          %img{:alt => "", :src => "/assets/silentnook/page3pic1.jpg"}/
+                          %figcaption
+                            %h3
+                              %a{:href => "#"} листья
+                            %p листья....
+                        %figure.figure1
+                          %img{:alt => "", :src => "/assets/silentnook/page3pic2.jpg"}/
+                          %figcaption
+                            %h3
+                              %a{:href => "#"} облака
+                            %p облака....
+                        %figure.figure1.magRight1
+                          %img{:alt => "", :src => "/assets/silentnook/page3pic3.jpg"}/
+                          %figcaption
+                            %h3
+                              %a{:href => "#"} блики
+                            %p блики....
+                        %figure.figure1
+                          %img{:alt => "", :src => "/assets/silentnook/page3pic4.jpg"}/
+                          %figcaption
+                            %h3
+                              %a{:href => "#"} дождь
+                            %p дождь....
+                        %figure.figure1.magRight1.magBot0
+                          %img{:alt => "", :src => "/assets/silentnook/page3pic5.jpg"}/
+                          %figcaption
+                            %h3
+                              %a{:href => "#"} поле
+                            %p поле....
+                        %figure.figure1.magBot0
+                          %img{:alt => "", :src => "/assets/silentnook/page3pic6.jpg"}/
+                          %figcaption
+                            %h3
+                              %a{:href => "#"} туман
+                            %p туман....
+              %li#pageContact
+                .closeButton
+                  %a{:href => "#!/pageHome"}
+                    %img{:alt => "", :src => "/assets/silentnook/closeButton.png"}/
+                .box
+                  .containerContent
+                    .col4.magRight2
+                      %h2.padBot6 Наш адрес
+                      .col5
+                        %figure.google_map
+                          = image_tag '/assets/silentnook/voronezh.jpg'
+                      .col6
+                        %p.color3.padBot7
+                          Сайлентнук
+                          %br>/
+                          Россия, Воронеж
+                        %p
+                          %span.space1> Телефон:
+                          +7 777 777 77 77
+                          %span.space1> Факс:
+                          +7 777 777 77 77
+                          %span
+                            E-mail:&nbsp;
+                            %a.color3{:href => "/"}
+                              %span.__cf_email__{"data-cfemail" => "4a272b23260a2e2f2725262324216425382d"} silentnook@mlip.ru
+                    .col7
+                      %h2.padBot6 Написать
+                      .wrapper
+                        %form#ContactForm{:action => "#"}
+                          .success Contact form submitted!&nbsp;We will be in touch soon.
+                          %fieldset.left
+                            .block
+                              %label.name.padRight3
+                                %span.bg
+                                  %input.input{:type => "text", :value => "Имя:"}/
+                                %span.error *Имя неккоректное.
+                                %span.empty *Поле не должно быть пустым.
+                              %label.email
+                                %span.bg
+                                  %input.input{:type => "text", :value => "E-mail:"}/
+                                %span.error *Адрес электронной почты не корректный.
+                                %span.empty *Поле не должно быть пустым.
+                            .block
+                              %label.message
+                                %span.bg
+                                  %textarea{:cols => "2", :rows => "1"} Сообщение:
+                                %span.error *Сообщение слишком короткое.
+                                %span.empty *Поле не должно быть пустым.
+                            .formButtons
+                              .formBtn
+                                %a.more{"data-type" => "reset", :href => "#"} Сброс
+                              .formBtn
+                                %a.more{"data-type" => "submit", :href => "#"} Ок
+              %li#pagePrivacy
+                .closeButton
+                  %a{:href => "#!/pageHome"}
+                    %img{:alt => "", :src => "/assets/silentnook/closeButton.png"}/
+                .box
+                  .containerContent
+                    .col8
+                      %h2.padBot5 Silentnook
+                      %p.padBot3
+                        %span.color2 Acneanrit maellus porase queibus etajerdase. Dusce wesfeugia ster spo.
+                        = succeed "malesuanasori" do
+                          %br/
+                        nunc necuccenas tristique orci altricies sren ametsre ster pharetra magna onecsan. Badalesuada nec sitem. elcursulit. Aeneauis rit et urna. Aliquam erat volutpat. Duis ac turpiseg utrum aneu
+                      %p.padBot4
+                        %span.color2 Fasertolor sit aconsectetuer adipiscing el auris ferme ntertyuades kertya.
+                        = succeed "laoreet" do
+                          %br/
+                        aliquam leo. Ut tellus doloapibus elementum velcursulit. Aeneauis ritya et urna. Aliquam erat volutpat. Duis ac turpiseg utrum aneu. etsre ster pharetra magna onecsan. Badalesuada nec sitem
+              
+          .title
+            %span Silentnook...
+      %footer
+        .mainFooter
+          .privHold
+            %pre.textPrivacy
+              Silentnook &copy; 2013
+    :javascript
+      $(window).load(function() { 
+        $('.page_spinner').fadeOut();
+        $('body').css({overflow:'auto', 'min-height':'900px'})
+      })

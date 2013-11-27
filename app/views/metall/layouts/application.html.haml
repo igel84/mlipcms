@@ -1,0 +1,68 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+    %meta{name:'yandex-verification', content:'4c3f918e1791c6fa'}
+    %link{:href => "/assets/metall/favicon.ico", :rel => "icon"}
+    %link{:href => "/assets/metall/favicon.ico", :rel => "shortcut icon"}    
+    -#%title Металл-лист-воронеж
+    = header
+    %link{:href => "/assets/metall/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    #header-wrapper
+      #header
+        #menu
+          %ul
+            %li
+              %a.first{:href => "/otsinkovannyy-list", title: "купить оцинкованный лист в воронеже"} Оцинкованный лист цены
+            %li
+              %a{:href => "chernyy-listovoy-metall", title: "купить лист черного металла в воронеже"} Листы черного металла
+            %li
+              %a{:href => "prays-list", title: "прайс-лист на комплектующие для производства вентиляции в воронеже"} Прайс-лист
+            %li
+              %a{:href => "/kontakty--2"} Контакты и реквизиты
+        -##search
+        -#  %form{:action => "#", :method => "get"}
+        -#    %fieldset
+        -#      %input#search-text{:name => "s", :size => "15", :type => "text"}/
+        -#      %input#search-submit{:type => "submit", :value => "GO"}/
+    #logo
+      %h1
+        %a{:href => "/", title: 'оцинкованный лист в воронеже'}
+          = image_tag "/assets/metall/logo-metall.png"
+      %p
+        %em
+          Лист оцинкованный в Воронеже по доступным ценам, производство и монтаж воздуховодов на Вашем объекте
+    %hr/
+    #page
+      #page-bgtop
+        #content
+          = yield
+        #sidebar
+          %ul
+            %li
+              %h2 Наше преимущество
+              %p Всегда в наличии оцинкованный лист самых ходовых размеров, собственное производство из оцинкованной стали воздухово-дов и фасонных частей, а также монтаж
+            %li
+              %h2 Полезная информация
+              %ul
+                - Page.where(site_id: Site.current_site_id).where(sub_menu: true).order('position').each do |page|
+                  %li= link_to page.name, page_link_path(page.slug), title: page.name
+            %li.center= image_tag '/assets/metall/list-os.jpg'
+        %div{:style => "clear:both"} &nbsp;
+      #footer
+        .fleft
+          %p &copy; Воронеж, 2013
+        .fright
+          %p
+            Разработка и продвижение сайтов
+            %a{:href => "http://mlip.ru", title: "создание раскрутка сайтов в воронеже"} MLIP
+        .fcenter
+          %p
+            Лист оцинкованный в Воронеже
+        .fclear
+    :javascript
+      (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter20851675 = new Ya.Metrika({id:20851675, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+    %noscript
+      %div
+        %img{:alt => "", :src => "//mc.yandex.ru/watch/20851675", :style => "position:absolute; left:-9999px;"}
