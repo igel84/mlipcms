@@ -8,10 +8,14 @@ set :user, "igel"
 set :port, 22
 set :deploy_to, "/home/#{user}/proj/#{application}"
 set :deploy_via, :remote_cache
-set :use_sudo, false
+set :use_sudo, true
+
+set :rvm_bin_path, "/usr/local/rvm/bin"
+#set :rvm_type, :system
+set :rvm_path, '/usr/local/rvm'
 
 set :scm, "git"
-set :repository, "git@github.com:igel84/#{application}.git"
+set :repository, "https://github.com/igel84/mlipcms" #git@github.com:igel84/#{application}.git"
 set :branch, "master"
 
 
