@@ -31,18 +31,20 @@ namespace :deploy do
     desc "Start application"
     task :start, roles: :app do
       run unicorn_start_cmd
+      #(cd /home/igel/proj/mlipcms/current; rvm use 1.9.3 do bundle exec unicorn -D -c /home/igel/proj/mlipcms/current/config/unicorn.rb -E production)
     end
 
     desc "Stop application"
     task :stop, roles: :app do
       run "[ -f #{unicorn_pid} ] && kill -QUIT `cat #{unicorn_pid}`"
+      #[ -f "/home/igel/proj/mlipcms/current/tmp/pids/unicorn.pid" ] && kill -QUIT `cat "/home/igel/proj/mlipcms/current/tmp/pids/unicorn.pid"`
     end
 
     desc "Restart Application"
     task :restart, roles: :app do
       run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
     end
-    
+
     %w[start stop restart].each do |command|
         #desc "#{command} unicorn server"
         #task command, roles: :app, except: {no_release: true} do
